@@ -47,5 +47,9 @@ conda env list
 - 가상환경 활성화
 ```
 conda activate 이름
-ex)conda activate py36
+```
+ex)
+```
+(base)PS C:\user\경로>conda activate py36
+(py36)PS C:\user\경로>
 ```
