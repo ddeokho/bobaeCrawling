@@ -31,3 +31,21 @@ pip install 모듈명
 ```
 (base)PS C:\user\경로>python bobaeDream.py
 ```
+
+
+4. anaconda 가상환경
+- 가상환경 만들기
+
+```
+conda create -n 이름 python=버전
+ex) conda create -n py36 python=3.6
+```
+- 가상환경 리스트 확인
+```
+conda env list
+```
+- 가상환경 활성화
+```
+conda activate 이름
+ex)conda activate py36
+```
