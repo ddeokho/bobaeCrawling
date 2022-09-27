@@ -22,6 +22,7 @@ pip install 모듈명
 - chrome버전 확인
 ![image](https://user-images.githubusercontent.com/20199818/192540395-b8bdfe7f-dc36-4b8f-8d4c-24abd4e5d633.png)
 
+- 동일한 버전의 chromedriver 설치
 - [chromedriver.exe 다운](https://chromedriver.chromium.org/downloads)
 
 - 작업한 python 파일과 같은 폴더 내에 위치
