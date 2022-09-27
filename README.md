@@ -24,8 +24,10 @@ pip install 모듈명
 
 - 동일한 버전의 chromedriver 설치: [chromedriver.exe](https://chromedriver.chromium.org/downloads) 다운
 
-- 작업한 python 파일과 같은 폴더 내에 위치
+- 다운받은 chromedriver.exe는 python 파일과 같은 폴더 내에 위치
 - 아나콘다 터미널에서 파이썬 파일 접근: cd 해당 python파일의 경로까지 작성
+
+3. 파이썬 파일 실행
 ```
 (base)PS C:\user\경로>python bobaeDream.py
 ```
