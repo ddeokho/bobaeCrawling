@@ -199,6 +199,8 @@ if __name__ == "__main__" :
 
 	df = pd.DataFrame(lists)
 	df.to_csv('bobae.csv', encoding='cp949')
+	
+	print("bobae.csv 저장 완료")
 
 	driver.quit()
 
