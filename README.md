@@ -38,7 +38,7 @@ pip install 모듈명
 
 ```
 conda create -n 이름 python=버전
-ex) conda create -n py36 python=3.6
+ex) conda create -n <span style="color:red">py36</span> python=<span style="color:red">3.6</span>
 ```
 - 가상환경 리스트 확인
 ```
@@ -48,6 +48,6 @@ conda env list
 ```
 conda activate 이름
 ex)
-(base)PS C:\user\경로>conda activate py36
+(base)PS C:\user\경로>conda activate <span style="color:red">py36</span>
 (py36)PS C:\user\경로>
 ```
