@@ -24,7 +24,7 @@ pip install 모듈명
 
 - 동일한 버전의 chromedriver 설치: [chromedriver.exe](https://chromedriver.chromium.org/downloads) 다운
 
-- 다운받은 chromedriver.exe는 python 파일과 같은 폴더 내에 위치
+- 다운받은 chromedriver.exe는 python 파일과 같은 경로 내에 위치(같은 경로에 없다면 .exe파일을 불러올 경로를 따로 코드 내에서 설정해야함.)
 - 아나콘다 터미널에서 파이썬 파일 접근: cd 해당 python파일의 경로까지 작성
 
 3. 파이썬 파일 실행
