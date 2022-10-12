@@ -194,7 +194,7 @@ if __name__ == "__main__" :
 		print("========"+str(page)+" 완료===========")
 		print("")
 		
-		driver.implicitly_wait(3)
+		driver.implicitly_wait(2)
 
 
 	df = pd.DataFrame(lists)
