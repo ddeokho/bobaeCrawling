@@ -16,8 +16,8 @@ from bs4 import BeautifulSoup
 
 url = "https://www.bobaedream.co.kr/"
 cate = "ALL&"#"ALL&search_cat=C3_s0"
-lenth = 20
-pages = 1
+lenth = 70
+pages = 10
 lists = {
 	'차량이름' : [],
 	'출시가격' : [],
