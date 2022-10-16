@@ -51,3 +51,9 @@ ex)
 (base)PS C:\user\경로>conda activate py36
 (py36)PS C:\user\경로>
 ```
+
+
+5. 터미널 내 실행 프로그램 강제종료 방법
+```
+Ctrl+c 
+```
