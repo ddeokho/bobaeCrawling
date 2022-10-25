@@ -18,13 +18,9 @@ pages = 20
 lists_col = {
 	'제목':[],
 	'조회수':[],
-    '날짜':[],
+	'날짜':[],
 	'링크':[]
 	}
-
-#lists_col = ['차량이름','출시가격','엔진형식','실린더 수','배기량(cc)','최고출력(ps/rpm)','최대토크(kg·m/rpm)', '0to100km/h(초)','최고속도(km/h)','구동방식','브레이크(전/후)','서스펜션(전/후)','스티어링','타이어','휠','차체(길이x너비x높이mm)','윤거(전x후mm)','축간거리(mm)','최저지상고(mm)','최소회전반경(ft)','연료','url']
-
-
 
 
 if __name__ == "__main__" :
@@ -45,8 +41,6 @@ if __name__ == "__main__" :
 		try :
 			#driver.get(f"https://www.bobaedream.co.kr/cyber/CyberCar.php?sel_m_gubun={cate}&page={page}&order=S11&view_size")
 			driver.get(f"https://www.bobaedream.co.kr/list?code=national&s_cate=&maker_no=&model_no=&or_gu=10&or_se=desc&s_selday=&pagescale={lenth}&info3=&noticeShow=&s_select=Body&s_key={search}&level_no=&vdate=&type=list&page={page}")
-
-
 			html = driver.page_source
 			soup = BeautifulSoup(html, 'html.parser')
 			driver.implicitly_wait(3)
@@ -104,8 +98,6 @@ if __name__ == "__main__" :
 
 
 	print("크롤링 완료")
-	#print(lists_col)
-
 	df=pd.DataFrame(lists_col)
 	df=df.loc[6:]
 	print(df.head())
