@@ -1,3 +1,5 @@
+#보배드림 국내 커뮤니티 게시판의 내용을 가져오는 크롤링 파일입니다.
+
 from lib2to3.pgen2 import driver
 from urllib import response
 import urllib.parse
@@ -29,7 +31,7 @@ if __name__ == "__main__" :
 	search = urllib.parse.quote_plus('기아')
 
 	driver = webdriver.Chrome()
-	driver.implicitly_wait(5)
+	driver.implicitly_wait(4)
 
 	for page in range(pages) :
 		
