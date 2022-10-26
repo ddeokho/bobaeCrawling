@@ -57,3 +57,10 @@ ex)
 ```
 Ctrl+c 
 ```
+
+
+6. 주피터랩/노트북 실행
+```
+(base)PS C:\user\경로>jypter-lab
+(base)PS C:\user\경로>jypter notebook
+```
