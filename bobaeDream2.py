@@ -1,6 +1,6 @@
 #보배드림 국내 커뮤니티 게시판의 내용을 가져오는 크롤링 파일입니다.
 
-from lib2to3.pgen2 import driver #크롬 드라이버 제어 모듈
+#from lib2to3.pgen2 import driver #python2 -> python3로 바꾸어주는 모듈 - 필요X
 import urllib.parse #input으로 받은 키워드를 url에 맞게 파싱하는 모듈
 import selenium #셀레니움 동적 제어 모듈 전체
 from selenium import webdriver #셀레니움 동적 제어(드라이버)
