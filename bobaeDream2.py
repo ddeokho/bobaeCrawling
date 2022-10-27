@@ -69,6 +69,8 @@ if __name__ == "__main__" :
 					lists_col['링크'].append(url_detail)
 			#select로 가져온 데이터는 리스트로서 여러개의 데이터가 담겨있기 때문에 for를 이용해 하나씩 내보내 줌.
 			#td안에는 제목, 링크 등 데이터가 포함되어 있어 한 번에 2개를 보여줄 수 있음.
+			#여기 링크를 활용해 상세페이지로 이동할 수 있음.
+			#javascript 함수 window.open('url') 이용 / 첫번째 코드 참고
 		
 			
 		except :
@@ -118,11 +120,13 @@ if __name__ == "__main__" :
 	print("크롤링 완료")
 	df=pd.DataFrame(lists_col)
 	df=df.loc[6:]
-	print(df.head())
-	df2=df.sort_values(by='조회수', ascending=False) #ascending=True
-
-	print(df2)
-	df2.to_csv('kia.csv', encoding='cp949')
+	#공지, 이벤트를 제외한 6번째부터 새로이 저장 
+	df=df.sort_values(by='조회수', ascending=False) #ascending=True
+	#조회수 기반으로 정렬
+	
+	print(df)
+	df.to_csv('kia.csv', encoding='cp949')
+	#csv 저장
 
 	print("완료")
 
