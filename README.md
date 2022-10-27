@@ -75,5 +75,8 @@ Ctrl+c
 ![image](https://user-images.githubusercontent.com/20199818/198200000-3be1da97-fb3f-439d-b581-2b3c0148155c.png)
 ![image](https://user-images.githubusercontent.com/20199818/198200027-d50b9bba-cd5c-4485-ad7b-96b88313db8a.png)
 
+usb 신호를 인지하는 부분을 제거해 줌
+
+* 위 내용으로 처리가 안되면 'USB Card Reader'나 'USB Host Controller'도 사용안함 처리
 
 
