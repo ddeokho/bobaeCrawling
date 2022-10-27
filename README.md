@@ -64,3 +64,16 @@ Ctrl+c
 (base)PS C:\user\경로>jypter-lab
 (base)PS C:\user\경로>jypter notebook
 ```
+
+
+7. [usd_device_ handle_win.cc 관련 시스템에 부착된 장치가 작동하지 않습니다.] - 오류 해결 방안1
+
+```
+[13660:10320:1210/143011.111:ERROR:device_event_log_impl.cc(211)] [14:30:11.111] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+```
+
+![image](https://user-images.githubusercontent.com/20199818/198200000-3be1da97-fb3f-439d-b581-2b3c0148155c.png)
+![image](https://user-images.githubusercontent.com/20199818/198200027-d50b9bba-cd5c-4485-ad7b-96b88313db8a.png)
+
+
+
