@@ -66,7 +66,7 @@ Ctrl+c
 ```
 
 
-7. [usd_device_ handle_win.cc 관련 시스템에 부착된 장치가 작동하지 않습니다.] - 오류 해결 방안1
+7. [usd_device_ handle_win.cc 관련 시스템에 부착된 장치가 작동하지 않습니다.] - 오류 해결 방안
 
 ```
 [13660:10320:1210/143011.111:ERROR:device_event_log_impl.cc(211)] [14:30:11.111] USB: usb_device_handle_win.cc:1020 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
