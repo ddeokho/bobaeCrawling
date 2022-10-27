@@ -1,15 +1,14 @@
 #보배드림 국내 커뮤니티 게시판의 내용을 가져오는 크롤링 파일입니다.
 
-from lib2to3.pgen2 import driver
-from urllib import response
-import urllib.parse
-import selenium
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import pandas as pd
-import time
+from lib2to3.pgen2 import driver #크롬 드라이버 제어 모듈
+import urllib.parse #input으로 받은 키워드를 url에 맞게 파싱하는 모듈
+import selenium #셀레니움 동적 제어 모듈 전체
+from selenium import webdriver #셀레니움 동적 제어(드라이버)
+from selenium.webdriver.common.keys import Keys #셀레니움 동적 제어(클릭,입력 등등)
+import pandas as pd #데이터프레임, 분석
+import time #시간 제어 및 체크
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup #정적, 데이터 크롤링
 
 
 
@@ -28,10 +27,13 @@ lists_col = {
 if __name__ == "__main__" :
 
 	#search = input("검색어를 입력하세요")
-	search = urllib.parse.quote_plus('기아')
+	search = urllib.parse.quote_plus('기아') 
+	#키워드를 url로 인지할 수 있게 바꾸어줌.
 
 	driver = webdriver.Chrome()
 	driver.implicitly_wait(4)
+	#크롬드라이버를 오픈하고 로딩이 끝날 때까지 기다림.
+	#활성화한 드라이버를 driver에 담아서 제어함.
 
 	for page in range(pages) :
 		
@@ -46,6 +48,7 @@ if __name__ == "__main__" :
 			html = driver.page_source
 			soup = BeautifulSoup(html, 'html.parser')
 			driver.implicitly_wait(3)
+			#드라이버로 원하는 웹화면으로 이동 후 bs를 이용해 html을 긁어옴 -> 이 떄 html형식으로 파싱해 가시화 필수.
 		
 		except :
 			print("페이지 오류")
@@ -54,7 +57,7 @@ if __name__ == "__main__" :
 
 		try :
 			datas = soup.select('#boardlist > tbody > tr > td')
-
+			
 			#제목
 			for data in datas :
 				
@@ -64,7 +67,10 @@ if __name__ == "__main__" :
 					lists_col['제목'].append(chk_none.text)
 					url_detail = url+str(chk_none['href'])
 					lists_col['링크'].append(url_detail)
+			#select로 가져온 데이터는 리스트로서 여러개의 데이터가 담겨있기 때문에 for를 이용해 하나씩 내보내 줌.
+			#td안에는 제목, 링크 등 데이터가 포함되어 있어 한 번에 2개를 보여줄 수 있음.
 		
+			
 		except :
 			print("제목 문제")
 			lists_col['제목'].append("error")
@@ -76,6 +82,16 @@ if __name__ == "__main__" :
 			datas2 = soup.select('#boardlist > tbody > tr > td.count')
 			for data in datas2 :
 				lists_col['조회수'].append(int(data.text))
+			
+			#조회수를 얻어옴, 위와 같음
+			#하나 더 생각해 볼 점은 '#boardlist > tbody > tr > td.count' 위와 접근 위치가 같음
+			#이에 우리는 for문 하나에 여러개를 넣을 수 있을 것을 예상해 볼 수 있음
+			#ex)
+			#datas = soup.select('#boardlist > tbody > tr > td')의 위치를 datas = soup.select('#boardlist > tbody > tr') 한 단계 올리고 
+			#자식들을 각각 따라간다면
+			#chk_none = data.select_one('td > a.bsubject')
+			#chk_title = data.select_one('td.count')
+			#이러한 형태로 받아올 수 있을 것을 예상해봄
 
 		except :
 			print("조회수 문제")
