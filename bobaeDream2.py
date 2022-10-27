@@ -13,8 +13,11 @@ from bs4 import BeautifulSoup #정적, 데이터 크롤링
 
 
 url = "https://www.bobaedream.co.kr/"
+#상세페이지 url을 담기 위한 url
 lenth = 70
+#한 화면에 나오는 게시글 수
 pages = 20
+#몇 페이지까지 할 것인지 정의
 
 lists_col = {
 	'제목':[],
@@ -36,7 +39,10 @@ if __name__ == "__main__" :
 	#활성화한 드라이버를 driver에 담아서 제어함.
 
 	for page in range(pages) :
-		
+	#페이지네이션(1,2,3 ... )을 이용해 여러페이지의 데이터를 추출하기 위래 for를 사용함.
+	#무한으로 가동시키고 마지막 페이지에서 끝내고 싶으면 while 활용+오류가 뜨는 시점을 try / except 이용.
+	#즉, while문을 가동을 중지 시키고 작업한 내용을 csv로 저장하면 완료할 수 있음.
+	
 		page=page+1
 
 		print("")
